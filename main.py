@@ -46,8 +46,7 @@ for sub in subscribers:
         except Exception as e:
             print(f"Error checking {company['name']}: {e}")
 
-    # TEMP: Force a dummy alert for testing email
-    new_jobs.append(("DummyCompany", "ai", "https://example.com"))
+    
 
     print(f"New jobs found for {user_email}: {new_jobs}")
 
