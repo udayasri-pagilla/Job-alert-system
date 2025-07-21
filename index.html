@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="refresh" content="5; url=https://job-alert-dashboard.onrender.com />
+  <title>CareerSpark - Your Job Finder</title>
+  <style>
+    /* Background animation */
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(-45deg, #667eea, #764ba2, #6b8dd6, #8e44ad);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: "Segoe UI", sans-serif;
+      color: white;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      margin-bottom: 0.2em;
+      animation: pop-in 1s ease-out forwards;
+    }
+
+    @keyframes pop-in {
+      from {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Typing effect */
+    .typing {
+      font-size: 1.4rem;
+      border-right: 3px solid white;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 4s steps(40, end) forwards;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    /* Button style */
+    .button {
+      margin-top: 2rem;
+      padding: 14px 30px;
+      font-size: 1.1rem;
+      color: #764ba2;
+      background-color: #fff;
+      border: none;
+      border-radius: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      animation: pulse 2s infinite;
+      transition: all 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #f2f2f2;
+      transform: scale(1.05);
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <h1>🚀 CareerSpark</h1>
+  <div class="typing">Finding jobs that match *you*... ✨</div>
+  <a class="button" href="https://job-alert-dashboard.onrender.com" target="_blank">Click if not redirected</a>
+  <div class="footer">Made with 💖 by Udayasri</div>
+</body>
+</html>
