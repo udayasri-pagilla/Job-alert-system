@@ -2,105 +2,156 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="refresh" content="5; url=https://job-alert-dashboard.onrender.com />
-  <title>CareerSpark - Your Job Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CareerSpark 🚀</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    /* Background animation */
-    body {
+    html, body {
       margin: 0;
       padding: 0;
-      height: 100vh;
-      background: linear-gradient(-45deg, #667eea, #764ba2, #6b8dd6, #8e44ad);
-      background-size: 400% 400%;
-      animation: gradient 15s ease infinite;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      font-family: "Segoe UI", sans-serif;
-      color: white;
-      overflow: hidden;
-      text-align: center;
+      font-family: 'Outfit', sans-serif;
+      background: #fcb69f;
+      color: #333;
+      overflow-x: hidden;
     }
 
-    @keyframes gradient {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+      backdrop-filter: blur(6px);
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      margin: 40px auto;
+      width: 90%;
+      max-width: 800px;
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
     }
 
     h1 {
-      font-size: 3.2rem;
-      margin-bottom: 0.2em;
-      animation: pop-in 1s ease-out forwards;
+      font-size: 3rem;
+      color: #4b0082;
     }
 
-    @keyframes pop-in {
-      from {
-        transform: scale(0.5);
-        opacity: 0;
-      }
-      to {
-        transform: scale(1);
-        opacity: 1;
-      }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
     }
 
-    /* Typing effect */
-    .typing {
-      font-size: 1.4rem;
-      border-right: 3px solid white;
-      white-space: nowrap;
-      overflow: hidden;
-      width: 0;
-      animation: typing 4s steps(40, end) forwards;
+    p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
     }
 
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-
-    /* Button style */
     .button {
-      margin-top: 2rem;
-      padding: 14px 30px;
-      font-size: 1.1rem;
-      color: #764ba2;
-      background-color: #fff;
-      border: none;
-      border-radius: 12px;
-      font-weight: bold;
-      cursor: pointer;
       text-decoration: none;
-      animation: pulse 2s infinite;
-      transition: all 0.3s ease;
+      background: #4b0082;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      transition: 0.3s ease;
     }
 
     .button:hover {
-      background-color: #f2f2f2;
+      background: #6a0dad;
       transform: scale(1.05);
     }
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
+    .footer {
+      font-size: 0.9rem;
+      color: #333;
+      margin-top: 40px;
     }
 
-    .footer {
-      position: absolute;
-      bottom: 10px;
-      font-size: 0.9rem;
-      opacity: 0.8;
+    .highlight {
+      font-weight: bold;
+      color: #7b2cbf;
     }
   </style>
 </head>
 <body>
-  <h1>🚀 CareerSpark</h1>
-  <div class="typing">Finding jobs that match *you*... ✨</div>
-  <a class="button" href="https://job-alert-dashboard.onrender.com" target="_blank">Click if not redirected</a>
-  <div class="footer">Made with 💖 by Udayasri</div>
+
+  <!-- 🔥 Particle Background -->
+  <div id="particles-js"></div>
+
+  <!-- 🎯 Hero Section -->
+  <section class="container" data-aos="zoom-in">
+    <h1>🚀 CareerSpark</h1>
+    <p>Finding jobs that match <span class="highlight">you</span>... ✨</p>
+
+    <!-- 🟣 Streamlit App URL Goes Here -->
+    <a href="https://job-alert-dashboard.onrender.com" class="button">Go to Career App</a>
+
+    <div class="footer">Made with 💖 by Udayasri</div>
+  </section>
+
+  <!-- More Scroll Sections -->
+  <section class="container" data-aos="fade-up">
+    <h2>✨ Why CareerSpark?</h2>
+    <p>Because you're unique. CareerSpark finds jobs that match your skills & interests. No spam. Just spark. 🌟</p>
+  </section>
+
+  <section class="container" data-aos="flip-left">
+    <h2>🔍 How It Works</h2>
+    <p>We monitor company websites daily. When a job matches your profile, we email you. That's it. Magic 🔮</p>
+  </section>
+
+  <section class="container" data-aos="fade-up">
+    <h2>💌 Stay Tuned</h2>
+    <p>More features coming soon... Follow us on GitHub & keep sparking your career journey 🚀</p>
+  </section>
+
+  <!-- ✨ Animate on Scroll Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1200 });</script>
+
+  <!-- 🔥 Particles.js Script -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5 },
+        "size": { "value": 3 },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": { "enable": true, "speed": 4 }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" }
+        },
+        "modes": {
+          "repulse": { "distance": 100 },
+          "push": { "particles_nb": 4 }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
 </body>
 </html>
