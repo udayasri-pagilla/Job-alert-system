@@ -22,7 +22,7 @@ except:
 # --- Email config (from GitHub secrets)
 from_email = os.environ.get("FROM_EMAIL")
 app_password = os.environ.get("APP_PASSWORD")
-
+print(f"✅ Starting job check...\nEmail sending from: {from_email}")
 # --- Main logic
 for sub in subscribers:
     user_email = sub["email"]
