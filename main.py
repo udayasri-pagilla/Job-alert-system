@@ -22,7 +22,10 @@ except:
 # --- Email config (from GitHub secrets)
 from_email = os.environ.get("FROM_EMAIL")
 app_password = os.environ.get("APP_PASSWORD")
-print(f"✅ Starting job check...\nEmail sending from: {from_email}")
+print(f"✅ Starting job check...")
+print("Loaded subscribers:", subscribers)
+print("Email sending from:", from_email)
+
 # --- Main logic
 for sub in subscribers:
     user_email = sub["email"]
@@ -43,15 +46,18 @@ for sub in subscribers:
         except Exception as e:
             print(f"Error checking {company['name']}: {e}")
 
+    # TEMP: Force a dummy alert for testing email
+    new_jobs.append(("DummyCompany", "ai", "https://example.com"))
+
+    print(f"New jobs found for {user_email}: {new_jobs}")
+
     if new_jobs:
         body = f"<h3>Hi {user_email} 👋, here are your job alerts:</h3>"
         for name, keyword, url in new_jobs:
             body += f"<p><b>{name}</b> posted about <i>{keyword}</i><br><a href='{url}'>Apply Here</a></p><hr>"
 
-        send_email("🔥 Job Alerts for You!", body, user_email, from_email, app_password)
-print("✅ Starting job check...")
-print("Loaded subscribers:", subscribers)
-print("Email sending from:", from_email)
+        print(f"📧 Sending test email to: {user_email}")
+        send_email("🔥 Job Alerts for You! [Test Run]", body, user_email, from_email, app_password)
 
 # --- Save notified list
 with open("notified.json", "w") as f:
