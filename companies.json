@@ -1,0 +1,12 @@
+[
+  {"name": "Google", "url": "https://careers.google.com/jobs/results/"},
+  {"name": "Microsoft", "url": "https://jobs.careers.microsoft.com/"},
+  {"name": "Amazon", "url": "https://www.amazon.jobs/en/"},
+  {"name": "Flipkart", "url": "https://www.flipkartcareers.com/#!/joblist"},
+  {"name": "TCS", "url": "https://www.tcs.com/careers"},
+  {"name": "Infosys", "url": "https://career.infosys.com/joblist"},
+  {"name": "Capgemini", "url": "https://www.capgemini.com/in-en/careers/"},
+  {"name": "Tech Mahindra", "url": "https://careers.techmahindra.com/"},
+  {"name": "Zomato", "url": "https://www.zomato.com/careers"},
+  {"name": "Swiggy", "url": "https://careers.swiggy.com/"}
+]
