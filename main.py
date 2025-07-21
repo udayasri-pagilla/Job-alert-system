@@ -2,6 +2,7 @@ import json
 import requests
 from bs4 import BeautifulSoup
 from email_utils import send_email
+import os
 
 # --- Load company URLs
 with open("companies.json", "r") as f:
@@ -18,9 +19,9 @@ try:
 except:
     notified = set()
 
-# --- Email config
-FROM_EMAIL = "udayasripagilla1873@gmail.com"
-APP_PASSWORD = "dsnl lcgc zyqm kayv"
+# --- Email config (from GitHub secrets)
+from_email = os.environ.get("FROM_EMAIL")
+app_password = os.environ.get("APP_PASSWORD")
 
 # --- Main logic
 for sub in subscribers:
@@ -47,7 +48,7 @@ for sub in subscribers:
         for name, keyword, url in new_jobs:
             body += f"<p><b>{name}</b> posted about <i>{keyword}</i><br><a href='{url}'>Apply Here</a></p><hr>"
 
-        send_email("🔥 Job Alerts for You!", body, user_email, FROM_EMAIL, APP_PASSWORD)
+        send_email("🔥 Job Alerts for You!", body, user_email, from_email, app_password)
 
 # --- Save notified list
 with open("notified.json", "w") as f:
