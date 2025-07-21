@@ -49,6 +49,9 @@ for sub in subscribers:
             body += f"<p><b>{name}</b> posted about <i>{keyword}</i><br><a href='{url}'>Apply Here</a></p><hr>"
 
         send_email("🔥 Job Alerts for You!", body, user_email, from_email, app_password)
+print("✅ Starting job check...")
+print("Loaded subscribers:", subscribers)
+print("Email sending from:", from_email)
 
 # --- Save notified list
 with open("notified.json", "w") as f:
